@@ -1,4 +1,4 @@
-import Navbar from './Components/Sections/Navbar';
+
 import Home from './Components/Sections/Home';
 import About from './Components/Sections/About';
 import Projects from './Components/Sections/Projects';
