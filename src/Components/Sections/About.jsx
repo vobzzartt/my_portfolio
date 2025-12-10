@@ -22,7 +22,7 @@ const skills = [
   { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", label: "Java" },
   { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", label: "MySQL" },
   { src: "https://cdn-icons-png.flaticon.com/512/1157/1157109.png", label: "Software Testing" },
-  { src: "https://cdn-icons-png.flaticon.com/512/414/414927.png", label: "Cloud Computing" }, // new working cloud icon
+  { src: "https://cdn-icons-png.flaticon.com/512/414/414927.png", label: "Cloud Computing" }, // fixed cloud icon
   { src: "https://cdn-icons-png.flaticon.com/512/7016/7016530.png", label: "Blockchain Innovation" }
 ];
 
@@ -87,7 +87,7 @@ export default function About() {
             </h4>
           </div>
 
-          <p className="text-gray-900 text-base md:text-lg font-medium text-start px-3 w-auto md:px-0 leading-relaxed tracking-wide">
+          <p className="text-gray-900 text-base md:text-lg font-[450] text-start px-3 w-auto md:px-0 leading-relaxed tracking-wide">
             I’m Victor Bodude — a Software Engineer, Tech Entrepreneur and emerging Technology Innovist focused on building modern, reliable, and scalable digital experiences. My work blends software engineering, cloud technologies, and intelligent systems to create solutions that feel fast, elegant, and impactful.
 
             <br /><br />
