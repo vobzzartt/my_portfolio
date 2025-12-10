@@ -77,7 +77,7 @@ export default function About() {
             </h4>
           </div>
 
-          <p className="text-gray-900 text-sm text-start px-3 w-auto md:px-0 leading-loose tracking-wide">
+          <p className="text-gray-900 text-base md:text-lg text-start px-3 w-auto md:px-0 leading-relaxed tracking-wide">
             I’m Victor Bodude — a Software Engineer, Tech Entrepreneur and emerging Technology Innovist focused on building modern, reliable, and scalable digital experiences. My work blends software engineering, cloud technologies, and intelligent systems to create solutions that feel fast, elegant, and impactful.
 
             <br /><br />
