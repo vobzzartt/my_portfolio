@@ -22,7 +22,7 @@ const skills = [
   { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", label: "Java" },
   { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", label: "MySQL" },
   { src: "https://cdn-icons-png.flaticon.com/512/1157/1157109.png", label: "Software Testing" },
-  { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg", label: "Cloud Computing" },
+  { src: "https://cdn-icons-png.flaticon.com/512/414/414927.png", label: "Cloud Computing" }, // new working cloud icon
   { src: "https://cdn-icons-png.flaticon.com/512/7016/7016530.png", label: "Blockchain Innovation" }
 ];
 
@@ -92,9 +92,6 @@ export default function About() {
 
             <br /><br />
             I’ve spent the past three years engineering products that combine clean architecture, thoughtful design, and long-term scalability. Even at 18, my journey has been shaped by deep curiosity, continuous learning, and a commitment to building technology that actually solves problems.
-
-            <br /><br />
-            I enjoy transforming ideas into real, functional products — from responsive user interfaces to optimized backend systems. My approach is simple: write clean code, design meaningful user experiences, and build technology that delivers real value.
 
             <br /><br />
             I enjoy turning ideas into real, scalable systems — from concept to architecture to execution. My work revolves around building technology that is fast, reliable, and built to last. I focus on writing clean, efficient code and engineering solutions that deliver long-term value, not quick fixes.
