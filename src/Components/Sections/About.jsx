@@ -78,27 +78,28 @@ export default function About() {
           </div>
 
           <p className="text-gray-900 text-sm text-start px-3 w-auto md:px-0 leading-loose tracking-wide">
-
-            My name is <strong>Victor Bodude</strong>, an 18-year-old Nigerian 
-            <strong> Software Engineer, Cloud Architect, Blockchain Innovator, and Tech Entrepreneur</strong>  
-            focused on building clean, scalable, and high-performance digital systems.
+            I’m Victor Bodude — a Software Engineer, Tech Entrepreneur and emerging Technology Innovist focused on building modern, reliable, and scalable digital experiences. My work blends software engineering, cloud technologies, and intelligent systems to create solutions that feel fast, elegant, and impactful.
 
             <br /><br />
-            I specialize in <strong>Backend Engineering, Full-Stack Development, Cybersecurity, Cloud Infrastructure, Web3 Systems, Software Testing, and AI-powered applications</strong>.  
-            I work confidently with technologies such as 
-            <strong> Go, Java, PHP, React, JavaScript, MySQL, HTML, and CSS</strong>.
+            I’ve spent the past three years engineering products that combine clean architecture, thoughtful design, and long-term scalability. Even at 18, my journey has been shaped by deep curiosity, continuous learning, and a commitment to building technology that actually solves problems.
 
             <br /><br />
-            As the founder of <strong>Big7 Technologies</strong> and co-founder of <strong>ServAfri</strong>,  
-            I am building Africa’s next generation of digital infrastructure — powering startups, businesses, and creators with reliable and scalable technology.
+            I enjoy transforming ideas into real, functional products — from responsive user interfaces to optimized backend systems. My approach is simple: write clean code, design meaningful user experiences, and build technology that delivers real value.
 
             <br /><br />
-            Every project I build carries one mission:  
-            <strong>Empower Africa’s digital future through innovation, speed, and real-world impact.</strong>
+            I enjoy turning ideas into real, scalable systems — from concept to architecture to execution. My work revolves around building technology that is fast, reliable, and built to last. I focus on writing clean, efficient code and engineering solutions that deliver long-term value, not quick fixes.
 
             <br /><br />
-            The journey is just beginning —  
-            <strong>Watch me redefine what’s possible.</strong>
+            Beyond coding, I’m driven by growth — personal, technical, and entrepreneurial. As a young founder, I thrive on identifying problems worth solving and building products that create real impact. I love engineering systems that scale, automating processes, and creating technology that enables people, businesses, and communities to do more.
+
+            <br /><br />
+            I believe innovation isn’t just about creativity — it’s about execution, discipline, and the ability to build what others only talk about. That mindset guides every project I work on, whether I’m designing architectures, building automation, or exploring new technologies that shape the future.
+
+            <br /><br />
+            At the core of everything I build is intention, clarity, and a commitment to engineering meaningful digital impact.
+
+            <br /><br />
+            Let’s build something great.
           </p>
         </div>
 
