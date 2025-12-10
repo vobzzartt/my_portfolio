@@ -9,20 +9,20 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 AOS.init();
 
-// ORDER: HTML → CSS → JS → React → PHP → MySQL → Go → Java → Cloud → Testing → Blockchain
+// ORDER: HTML → CSS → JavaScript → React → PHP → Python → Go → Java → MySQL → Software Testing → Cloud Computing → Blockchain Innovation
 const skills = [
   { src: html, label: "HTML" },
   { src: css, label: "CSS" },
   { src: js, label: "JavaScript" },
   { src: reactIcon, label: "React" },
 
-  // ONLINE ICONS — NO LOCAL FILES NEEDED 🟣
   { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg", label: "PHP" },
-  { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", label: "MySQL" },
+  { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", label: "Python" },
   { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg", label: "Go (Golang)" },
   { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", label: "Java" },
-  { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg", label: "Cloud Engineering" },
+  { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", label: "MySQL" },
   { src: "https://cdn-icons-png.flaticon.com/512/1157/1157109.png", label: "Software Testing" },
+  { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg", label: "Cloud Computing" },
   { src: "https://cdn-icons-png.flaticon.com/512/7016/7016530.png", label: "Blockchain Innovation" }
 ];
 
@@ -113,7 +113,7 @@ export default function About() {
             100% { transform: translateX(-50%); }
           }
           .animate-marquee {
-            animation: marquee 18s linear infinite;
+            animation: marquee 30s linear infinite; /* slowed down for readability */
           }
         `}
       </style>
