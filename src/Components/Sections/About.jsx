@@ -48,11 +48,21 @@ export default function About() {
         </div>
 
         {/* Marquee for Mobile */}
-        <div className="relative overflow-x-hidden w-full md:hidden mt-4">
-          <div className="flex animate-marquee whitespace-nowrap gap-4">
-            {[...skills, ...skills].map((skill, index) => (
+        <div className="relative overflow-hidden w-full md:hidden mt-4">
+          <div className="flex animate-marquee whitespace-nowrap">
+            {skills.map((skill, index) => (
               <div 
                 key={index} 
+                className="flex flex-col items-center bg-white p-3 shadow-xl min-w-[90px] mx-2 rounded-md"
+              >
+                <img src={skill.src} className="w-10 mb-1" alt={`${skill.label} logo`} />
+                <span className="text-xs font-semibold text-center">{skill.label}</span>
+              </div>
+            ))}
+            {/* duplicate once for seamless infinite scroll */}
+            {skills.map((skill, index) => (
+              <div 
+                key={"dup-" + index} 
                 className="flex flex-col items-center bg-white p-3 shadow-xl min-w-[90px] mx-2 rounded-md"
               >
                 <img src={skill.src} className="w-10 mb-1" alt={`${skill.label} logo`} />
@@ -109,11 +119,12 @@ export default function About() {
       <style>
         {`
           @keyframes marquee {
-            0% { transform: translateX(0%); }
-            100% { transform: translateX(-50%); }
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
           }
           .animate-marquee {
-            animation: marquee 30s linear infinite; /* slower for readability */
+            display: flex;
+            animation: marquee 40s linear infinite;
           }
         `}
       </style>
