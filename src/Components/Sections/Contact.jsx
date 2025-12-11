@@ -53,7 +53,7 @@ export default function Contact() {
           <span className="blinking-circle absolute w-3 h-3"></span>
         </div>
         <h2 className="text-start md:text-center text-2xl font-bold mb-12 mt-8">
-          Wanna Build a Project?
+          Looking to Build? I’d Love to Collaborate
         </h2>
       </div>
 
