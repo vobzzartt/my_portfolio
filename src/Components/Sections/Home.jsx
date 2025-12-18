@@ -43,7 +43,7 @@ function RotatingTitles() {
 const fadeIn = (direction, delay) => ({
   hidden: {
     opacity: 0,
-    x: direction === "left" ? 50 : direction === "right" ? -50 : 0,
+    x: direction === "left" ? 60 : direction === "right" ? -60 : 0,
   },
   show: {
     opacity: 1,
@@ -65,7 +65,7 @@ export default function Home() {
       id="home"
       className="w-full bg-[#F9F6F0] px-4 md:px-16 lg:px-28 pt-12 overflow-x-hidden"
     >
-      <div className="container mx-auto min-h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-12">
+      <div className="container mx-auto min-h-screen flex flex-col-reverse md:flex-row items-center justify-between gap-12">
 
         {/* ================= LEFT CONTENT ================= */}
         <motion.div
@@ -120,21 +120,23 @@ export default function Home() {
           animate="show"
           className="w-full md:w-1/2 flex justify-center"
         >
-          <div className="relative">
-            {/* Soft Glow */}
-            <div className="absolute inset-0 rounded-full blur-3xl bg-[#613B26]/10"></div>
+          <div className="relative flex justify-center">
+            {/* Subtle background glow */}
+            <div className="absolute inset-0 rounded-full bg-[#613B26]/10 blur-3xl"></div>
 
-            {/* Image */}
+            {/* BIG ROUND IMAGE */}
             <img
               src={mypicture}
               alt="Victor Bodude"
               className="
                 relative
-                w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80
-                object-cover
+                w-72 h-72
+                md:w-[420px] md:h-[420px]
+                lg:w-[520px] lg:h-[520px]
                 rounded-full
-                border border-black/10
+                object-cover
                 shadow-2xl
+                border border-black/10
               "
             />
           </div>
