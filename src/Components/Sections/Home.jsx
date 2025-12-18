@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import mypicture from "../../images/mypic.jpg";
+import 'animate.css';
 
 /* ---------------------------
    ROTATING TITLES
@@ -8,9 +9,11 @@ import mypicture from "../../images/mypic.jpg";
 const rotatingTexts = [
   "I'm Victor Bodude",
   "I'm a Software Engineer",
+  "I'm a Web Developer",
   "I'm a Cloud Engineer",
-  "I'm a Tech Entrepreneur",
+  "I'm a Software Tester",
   "I'm a Blockchain Innovator",
+  "I'm a Tech Entrepreneur"
 ];
 
 function RotatingTitles() {
@@ -19,17 +22,18 @@ function RotatingTitles() {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % rotatingTexts.length);
-    }, 2800);
+    }, 3000);
     return () => clearInterval(timer);
   }, []);
 
   return (
     <motion.h2
       key={index}
-      initial={{ opacity: 0, y: 10 }}
+      initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.45 }}
-      className="text-black font-semibold text-3xl lg:text-5xl mb-4"
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.6 }}
+      className="text-black font-medium text-3xl lg:text-5xl mb-2 leading-tight tracking-normal"
     >
       {rotatingTexts[index]}
     </motion.h2>
@@ -37,99 +41,117 @@ function RotatingTitles() {
 }
 
 /* ---------------------------
+   ANIMATION FUNCTION
+---------------------------- */
+const fadeIn = (direction, delay) => {
+  return {
+    hidden: {
+      y: direction === 'up' ? 40 : direction === 'down' ? -40 : 0,
+      x: direction === 'left' ? 40 : direction === 'right' ? -40 : 0,
+      opacity: 0,
+    },
+    show: {
+      y: 0,
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        once: true,
+        duration: 1.2,
+        delay: delay,
+        ease: [0.5, 0.25, 0.25, 0.75],
+      },
+    },
+  };
+};
+
+/* ---------------------------
    HOME COMPONENT
 ---------------------------- */
 export default function Home() {
   return (
-    <section
+    <div
       id="home"
-      className="w-full bg-[#F9F6F0] px-4 md:px-16 lg:px-28 pt-10 md:pt-14"
+      className="w-full px-4 md:px-16 lg:px-28 pt-10 bg-[#F9F6F0] max-w-full overflow-x-hidden"
     >
-      <div className="container mx-auto flex flex-col items-center">
+      <div className="container mx-auto flex flex-col-reverse md:flex-row gap-8 min-h-screen items-center justify-center">
 
-        {/* ================= IMAGE ================= */}
+        {/* LEFT CONTENT */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7 }}
-          className="relative flex justify-center"
-        >
-          {/* Soft glow */}
-          <div className="absolute inset-0 rounded-full bg-[#613B26]/10 blur-3xl"></div>
-
-          <img
-            src={mypicture}
-            alt="Victor Bodude"
-            className="
-              relative
-              w-[300px] h-[300px]
-              sm:w-[340px] sm:h-[340px]
-              md:w-[420px] md:h-[420px]
-              lg:w-[480px] lg:h-[480px]
-              rounded-full
-              object-cover
-              shadow-2xl
-            "
-          />
-        </motion.div>
-
-        {/* ===== SPACING CONTROL (THIS IS THE FIX) ===== */}
-        <div className="mt-10 md:mt-14"></div>
-
-        {/* ================= TEXT ================= */}
-        <motion.div
-          initial={{ opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.15 }}
-          className="text-center max-w-2xl"
+          variants={fadeIn("left", 0.3)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          className="w-full md:w-1/2"
         >
           {/* STATUS */}
-          <div className="flex items-center justify-center gap-2 mb-3">
-            <span className="h-2 w-2 rounded-full bg-[#613B26]"></span>
-            <p className="text-sm text-[#613B26] font-medium">
+          <div className="mb-4 flex items-center gap-x-3">
+            <div className="relative flex items-center mr-3">
+              <span className="absolute w-2 h-2 bg-[#613B26] rounded-full blinking-circle"></span>
+              <span className="absolute w-4 h-4 border border-[#613B26] rounded-full blinking-circle"></span>
+            </div>
+            <h5 className="text-xs font-light text-[#613B26]">
               Software Engineer • Tech Entrepreneur
-            </p>
+            </h5>
           </div>
 
-          {/* TITLE */}
+          {/* ROTATING TITLES */}
           <RotatingTitles />
 
-          {/* DESCRIPTION */}
-          <p className="text-sm leading-relaxed text-black mt-2">
-            I build clean, scalable applications and cloud platforms using modern
-            technologies. I specialize in Full-Stack Engineering, Cloud
-            Infrastructure, intelligent systems, and high-performance backend
-            architecture.
+          {/* INTRO TEXT */}
+          <p className="font-normal text-[14px] max-w-2xl mb-6 leading-relaxed tracking-wide text-black">
+            I build clean, scalable applications and cloud platforms using modern technologies.  
+            I specialize in Full-Stack Engineering, Cloud Infrastructure, AI Systems, Cybersecurity,  
+            Blockchain Innovation, and high-performance backend architecture.
+            <br /><br />
+            My mission is to create meaningful digital solutions that impact businesses, creators,  
+            and Africa’s growing tech ecosystem.
           </p>
 
-          {/* BUTTON */}
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            href="/Victor_Bodude_CV.pdf"
-            download
-            className="
-              inline-block
-              mt-7
-              px-8 py-3
-              rounded-xl
-              bg-[#613B26]
-              text-white
-              font-medium
-              shadow-lg
-              hover:bg-transparent
-              hover:text-[#613B26]
-              hover:border-2
-              hover:border-[#613B26]
-              transition-all
-              duration-300
-            "
+          {/* MY CV BUTTON */}
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <a
+              href="/Victor_Bodude_CV.pdf"
+              download="Victor_Bodude_CV.pdf"
+              className="px-8 py-3 bg-[#613B26] text-white rounded-xl font-medium shadow-xl 
+              hover:bg-transparent hover:border-2 hover:border-[#613B26] hover:text-[#613B26]
+              transition-colors duration-300 inline-block text-center"
+            >
+              My Resume
+            </a>
+          </motion.div>
+        </motion.div>
+
+        {/* RIGHT IMAGE */}
+        <motion.div
+          variants={fadeIn("right", 0.5)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          className="w-full md:w-1/2 flex justify-center"
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="flex justify-center"
           >
-            My Resume
-          </motion.a>
+            <img
+              src={mypicture}
+              alt="Victor Bodude"
+              className="
+                rounded-full
+                object-cover
+                shadow-2xl
+                w-[280px] h-[280px]
+                md:w-[360px] md:h-[360px]
+                lg:w-[520px] lg:h-[520px]
+              "
+            />
+          </motion.div>
         </motion.div>
 
       </div>
-    </section>
+    </div>
   );
 }
