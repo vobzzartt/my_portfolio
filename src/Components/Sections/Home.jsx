@@ -26,9 +26,9 @@ function RotatingTitles() {
   return (
     <motion.h2
       key={index}
-      initial={{ opacity: 0, y: 12 }}
+      initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.45 }}
       className="text-black font-semibold text-3xl lg:text-5xl mb-4"
     >
       {rotatingTexts[index]}
@@ -43,18 +43,18 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="w-full bg-[#F9F6F0] px-4 md:px-16 lg:px-28 pt-6 md:pt-10"
+      className="w-full bg-[#F9F6F0] px-4 md:px-16 lg:px-28 pt-10 md:pt-14"
     >
-      <div className="container mx-auto flex flex-col items-center gap-6 md:gap-10">
+      <div className="container mx-auto flex flex-col items-center">
 
         {/* ================= IMAGE ================= */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.7 }}
           className="relative flex justify-center"
         >
-          {/* Glow */}
+          {/* Soft glow */}
           <div className="absolute inset-0 rounded-full bg-[#613B26]/10 blur-3xl"></div>
 
           <img
@@ -73,11 +73,14 @@ export default function Home() {
           />
         </motion.div>
 
+        {/* ===== SPACING CONTROL (THIS IS THE FIX) ===== */}
+        <div className="mt-10 md:mt-14"></div>
+
         {/* ================= TEXT ================= */}
         <motion.div
-          initial={{ opacity: 0, y: 18 }}
+          initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.7, delay: 0.15 }}
           className="text-center max-w-2xl"
         >
           {/* STATUS */}
@@ -105,9 +108,22 @@ export default function Home() {
             whileTap={{ scale: 0.95 }}
             href="/Victor_Bodude_CV.pdf"
             download
-            className="inline-block mt-6 px-8 py-3 rounded-xl bg-[#613B26] text-white font-medium shadow-lg
-              hover:bg-transparent hover:text-[#613B26] hover:border-2 hover:border-[#613B26]
-              transition-all duration-300"
+            className="
+              inline-block
+              mt-7
+              px-8 py-3
+              rounded-xl
+              bg-[#613B26]
+              text-white
+              font-medium
+              shadow-lg
+              hover:bg-transparent
+              hover:text-[#613B26]
+              hover:border-2
+              hover:border-[#613B26]
+              transition-all
+              duration-300
+            "
           >
             My Resume
           </motion.a>
