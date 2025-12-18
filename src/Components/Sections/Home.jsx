@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import mypicture from "../../images/mypic.jpg";
-import 'animate.css';
+import "animate.css";
 
 /* ---------------------------
    ROTATING TITLES
@@ -9,11 +9,9 @@ import 'animate.css';
 const rotatingTexts = [
   "I'm Victor Bodude",
   "I'm a Software Engineer",
-  "I'm a Web Developer",
   "I'm a Cloud Engineer",
-  "I'm a Software Tester",
+  "I'm a Tech Entrepreneur",
   "I'm a Blockchain Innovator",
-  "I'm a Tech Entrepreneur"
 ];
 
 function RotatingTitles() {
@@ -31,9 +29,8 @@ function RotatingTitles() {
       key={index}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.6 }}
-      className="text-black font-medium text-3xl lg:text-5xl mb-2 leading-tight tracking-normal"
+      className="text-black font-semibold text-3xl lg:text-5xl mb-4 leading-tight"
     >
       {rotatingTexts[index]}
     </motion.h2>
@@ -43,109 +40,107 @@ function RotatingTitles() {
 /* ---------------------------
    ANIMATION FUNCTION
 ---------------------------- */
-const fadeIn = (direction, delay) => {
-  return {
-    hidden: {
-      y: direction === 'up' ? 40 : direction === 'down' ? -40 : 0,
-      x: direction === 'left' ? 40 : direction === 'right' ? -40 : 0,
-      opacity: 0,
+const fadeIn = (direction, delay) => ({
+  hidden: {
+    opacity: 0,
+    x: direction === "left" ? 50 : direction === "right" ? -50 : 0,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1,
+      delay,
+      ease: "easeOut",
     },
-    show: {
-      y: 0,
-      x: 0,
-      opacity: 1,
-      transition: {
-        type: 'spring',
-        once: true,
-        duration: 1.2,
-        delay: delay,
-        ease: [0.5, 0.25, 0.25, 0.75],
-      },
-    },
-  };
-};
+  },
+});
 
 /* ---------------------------
    HOME COMPONENT
 ---------------------------- */
 export default function Home() {
   return (
-    <div
+    <section
       id="home"
-      className="w-full px-4 md:px-16 lg:px-28 pt-10 bg-[#F9F6F0] max-w-full overflow-x-hidden"
+      className="w-full bg-[#F9F6F0] px-4 md:px-16 lg:px-28 pt-12 overflow-x-hidden"
     >
-      <div className="container mx-auto flex flex-col-reverse md:flex-row gap-8 min-h-screen items-center justify-center">
+      <div className="container mx-auto min-h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-12">
 
-        {/* LEFT CONTENT */}
+        {/* ================= LEFT CONTENT ================= */}
         <motion.div
-          variants={fadeIn("left", 0.3)}
+          variants={fadeIn("left", 0.2)}
           initial="hidden"
           animate="show"
-          exit="hidden"
           className="w-full md:w-1/2"
         >
           {/* STATUS */}
-          <div className="mb-4 flex items-center gap-x-3">
-            <div className="relative flex items-center mr-3">
-              <span className="absolute w-2 h-2 bg-[#613B26] rounded-full blinking-circle"></span>
-              <span className="absolute w-4 h-4 border border-[#613B26] rounded-full blinking-circle"></span>
-            </div>
-            <h5 className="text-xs font-light text-[#613B26]">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#613B26] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#613B26]"></span>
+            </span>
+            <p className="text-sm text-[#613B26] font-medium">
               Software Engineer • Tech Entrepreneur
-            </h5>
+            </p>
           </div>
 
-          {/* ROTATING TITLES */}
+          {/* TITLE */}
           <RotatingTitles />
 
-          {/* INTRO TEXT */}
-          <p className="font-normal text-[14px] max-w-2xl mb-6 leading-relaxed tracking-wide text-black">
-            I build clean, scalable applications and cloud platforms using modern technologies.  
-            I specialize in Full-Stack Engineering, Cloud Infrastructure, AI Systems, Cybersecurity,  
-            Blockchain Innovation, and high-performance backend architecture.
+          {/* DESCRIPTION */}
+          <p className="text-sm leading-relaxed text-black max-w-xl mb-8">
+            I build clean, scalable applications and cloud platforms using modern
+            technologies. I specialize in Full-Stack Engineering, Cloud
+            Infrastructure, intelligent systems, and high-performance backend
+            architecture.
             <br /><br />
-            My mission is to create meaningful digital solutions that impact businesses, creators,  
-            and Africa’s growing tech ecosystem.
+            My mission is to create meaningful digital solutions that impact
+            businesses, creators, and Africa’s growing tech ecosystem.
           </p>
 
-          {/* MY CV BUTTON (UPDATED) */}
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <a
-              href="/Victor_Bodude_CV.pdf"
-              download="Victor_Bodude_CV.pdf"
-              className="px-8 py-3 bg-[#613B26] text-white rounded-xl font-medium shadow-xl 
-              hover:bg-transparent hover:border-2 hover:border-[#613B26] hover:text-[#613B26]
-              transition-colors duration-300 inline-block text-center"
-            >
-              My Resume
-            </a>
-          </motion.div>
+          {/* BUTTON */}
+          <motion.a
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            href="/Victor_Bodude_CV.pdf"
+            download
+            className="inline-block px-8 py-3 rounded-xl bg-[#613B26] text-white font-medium shadow-lg
+              hover:bg-transparent hover:text-[#613B26] hover:border-2 hover:border-[#613B26]
+              transition-all duration-300"
+          >
+            My Resume
+          </motion.a>
         </motion.div>
 
-        {/* RIGHT IMAGE */}
+        {/* ================= RIGHT IMAGE ================= */}
         <motion.div
-          variants={fadeIn("right", 0.5)}
+          variants={fadeIn("right", 0.4)}
           initial="hidden"
           animate="show"
-          exit="hidden"
           className="w-full md:w-1/2 flex justify-center"
         >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            className="flex justify-center"
-          >
+          <div className="relative">
+            {/* Soft Glow */}
+            <div className="absolute inset-0 rounded-full blur-3xl bg-[#613B26]/10"></div>
+
+            {/* Image */}
             <img
               src={mypicture}
               alt="Victor Bodude"
-              className="w-full max-w-xs md:max-w-[350px] lg:max-w-full 
-              lg:h-screen lg:object-cover"
+              className="
+                relative
+                w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80
+                object-cover
+                rounded-full
+                border border-black/10
+                shadow-2xl
+              "
             />
-          </motion.div>
+          </div>
         </motion.div>
 
       </div>
-    </div>
+    </section>
   );
 }
