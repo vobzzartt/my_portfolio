@@ -137,17 +137,18 @@ export default function Home() {
             className="flex justify-center"
           >
             <img
-              src={mypicture}
-              alt="Victor Bodude"
-              className="
-                rounded-full
-                object-cover
-                shadow-2xl
-                w-[280px] h-[280px]
-                md:w-[360px] md:h-[360px]
-                lg:w-[520px] lg:h-[520px]
-              "
-            />
+  src={mypicture}
+  alt="Victor Bodude"
+  className="
+    object-cover
+    rounded-full
+    shadow-2xl
+
+    w-[340px] h-[340px]
+    md:w-[460px] md:h-[460px]
+    lg:w-[650px] lg:h-[650px]
+  "
+/>
           </motion.div>
         </motion.div>
 
