@@ -1,268 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Primary SEO -->
-  <title>
-    Victor Bodude – Software Engineer, Entreprenuer & Cloud Engineer 
-  </title>
-  <meta
-    name="title"
-    content="Victor Bodude – Software Engineer, Web Developer & Tech Entrepreneur"
-  />
+  <!-- =========================
+       CORE IDENTITY (ENTITY-FIRST)
+  ========================== -->
+  <title>Victor Bodude – Software Engineer & Tech Entrepreneur</title>
+
   <meta
     name="description"
-    content="Hire Victor Bodude – a young Nigerian Software Engineer, Web Developer and Tech Entrepreneur. I design and build fast, modern, and profitable websites, web apps and cloud solutions for businesses, brands and startups across Nigeria, Africa and worldwide."
+    content="Victor Bodude is a Software Engineer and Tech Entrepreneur focused on building scalable software systems, cloud infrastructure, and high-performance digital platforms."
   />
 
-  <!-- Keyword Targeting (Services + Location + Freelancer) -->
+  <!-- 🔑 LOW-SPAM, HIGH-SIGNAL KEYWORDS -->
   <meta
     name="keywords"
     content="
       Victor Bodude,
-      web developer,
-      web developer in Nigeria,
-      web designer,
-      web designer in Nigeria,
-      website designer Nigeria,
-      website designer near me,
-      website developer Nigeria,
-      best web developer in Nigeria,
-      best website designer in Nigeria,
       software engineer,
-      software engineer Nigeria,
+      tech entrepreneur,
       cloud engineer,
-      cloud engineer Nigeria,
-      frontend developer,
-      backend developer,
-      full stack developer,
-      freelance web developer,
-      freelance web developer Nigeria,
-      freelance software engineer,
-      hire web developer,
-      hire web developer in Nigeria,
-      hire software engineer Nigeria,
-      hire website designer Lagos,
-      website designer Lagos,
-      website designer Port Harcourt,
-      website designer Abuja,
-      landing page developer Nigeria,
-      ecommerce website developer Nigeria,
-      corporate website developer,
-      portfolio website developer,
-      business website developer,
-      SaaS developer,
-      AI developer Nigeria,
-      automation developer,
-      tech entrepreneur Nigeria,
-      Nigerian software developer,
-      Nigerian web developer,
-      Nigerian cloud engineer,
-      African software engineer,
-      African web developer,
-      app developer Nigeria,
-      React developer Nigeria,
-      Next.js developer Nigeria,
-      Laravel developer Nigeria,
-      PHP developer Nigeria,
-      Java developer Nigeria,
-      Go developer Nigeria,
-      COBOL developer,
-      SEO friendly website developer,
-      mobile responsive website developer,
-      custom web app developer Nigeria,
-      digital solutions Nigeria,
-      tech startup developer Nigeria,
-      web development for small business,
-      web development for startups,
-      build website for my business in Nigeria,
-      cheap website developer in Nigeria,
-      premium website developer in Nigeria
+      systems engineering,
+      scalable software,
+      backend engineering
     "
   />
 
-  <!-- Open Graph (Facebook, WhatsApp, LinkedIn Preview) -->
-  <meta
-    property="og:title"
-    content="Victor Bodude – Software Engineer, Web Developer & Tech Entrepreneur in Nigeria"
-  />
-  <meta
-    property="og:description"
-    content="I help businesses, creators and startups in Nigeria and worldwide build powerful websites, web apps and cloud-based solutions that look good, load fast and actually bring results."
-  />
-  <meta
-    property="og:image"
-    content="https://victorbodude.name.ng/og.png"
-  />
-  <meta
-    property="og:url"
-    content="https://victorbodude.name.ng"
-  />
-  <meta property="og:type" content="website" />
-  <meta
-    property="og:site_name"
-    content="Victor Bodude – Software Engineer & Web Developer"
-  />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta
-    name="twitter:title"
-    content="Victor Bodude – Software Engineer & Web Developer"
-  />
-  <meta
-    name="twitter:description"
-    content="Need a modern website or web app that actually works for your business? I build clean, scalable, and profitable digital products using modern technologies."
-  />
-  <meta
-    name="twitter:image"
-    content="https://victorbodude.name.ng/og.png"
-  />
-  <meta name="twitter:creator" content="@vobzzartt" />
-
-  <!-- Canonical URL -->
+  <!-- =========================
+       SEARCH ENGINE CONTROL
+  ========================== -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="canonical" href="https://victorbodude.name.ng" />
 
-  <!-- Theme / PWA Basics -->
+  <!-- =========================
+       PERFORMANCE (CRAWL PRIORITY)
+  ========================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- =========================
+       OPEN GRAPH (SOCIAL + AI)
+  ========================== -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://victorbodude.name.ng" />
+  <meta property="og:title" content="Victor Bodude – Software Engineer & Tech Entrepreneur" />
+  <meta
+    property="og:description"
+    content="Software Engineer and Tech Entrepreneur building scalable systems and modern digital infrastructure."
+  />
+  <meta property="og:image" content="https://victorbodude.name.ng/og.png" />
+  <meta property="og:site_name" content="Victor Bodude" />
+
+  <!-- =========================
+       TWITTER / X (GROK SIGNAL)
+  ========================== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@vobzzartt" />
+  <meta name="twitter:title" content="Victor Bodude – Software Engineer & Tech Entrepreneur" />
+  <meta
+    name="twitter:description"
+    content="Building scalable software systems, cloud infrastructure, and impactful digital platforms."
+  />
+  <meta name="twitter:image" content="https://victorbodude.name.ng/og.png" />
+
+  <!-- =========================
+       META SIGNALS AI MODELS USE
+  ========================== -->
+  <meta name="author" content="Victor Bodude" />
+  <meta http-equiv="content-language" content="en" />
   <meta name="theme-color" content="#6f1cd7" />
-  <!-- You said you want favicon blocked, so keep this empty or minimal -->
+
   <link rel="icon" href="data:," />
   <link rel="manifest" href="/site.webmanifest" />
 
-  <!-- Robots -->
-  <meta name="robots" content="index, follow" />
-
-  <!-- JSON-LD: Person + Organization + Website + FAQ (Rich Snippets) -->
+  <!-- =========================
+       STRUCTURED DATA (ENTITY GRAPH)
+       THIS IS THE BIG WEAPON
+  ========================== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://victorbodude.name.ng#victor",
-        "name": "Victor Bodude",
-        "url": "https://victorbodude.name.ng",
-        "image": "https://victorbodude.name.ng/images/hero.png",
-        "jobTitle": "Software Engineer, Web Developer & Tech Entrepreneur",
-        "description": "Young Nigerian Software Engineer, Web Developer, Cloud Engineer and Tech Entrepreneur building modern, scalable digital solutions for businesses, creators and startups.",
-        "nationality": "Nigerian",
-        "knowsAbout": [
-          "Web development",
-          "Cloud computing",
-          "Software engineering",
-          "Frontend development",
-          "Backend development",
-          "Full stack development",
-          "APIs",
-          "Databases",
-          "DevOps basics",
-          "Cybersecurity fundamentals",
-          "AI and automation",
-          "Digital marketing for tech",
-          "Startup product building"
-        ],
-        "sameAs": [
-          "https://x.com/vobzzartt",
-          "https://www.instagram.com/vobzzartt",
-          "https://www.linkedin.com/in/victorbodude",
-          "https://github.com/vobzzartt"
-        ],
-        "worksFor": {
-          "@type": "Organization",
-          "@id": "https://victorbodude.name.ng#big7",
-          "name": "Big7 Technologies"
-        }
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://victorbodude.name.ng#big7",
-        "name": "Big7 Technologies",
-        "url": "https://big7technologies.com",
-        "description": "Big7 Technologies is a Nigerian technology company building products like ServAfri, BigBoost Media Hub and other digital solutions for Africa and the world.",
-        "logo": "https://victorbodude.name.ng/og.png",
-        "founder": {
-          "@id": "https://victorbodude.name.ng#victor"
-        },
-        "sameAs": [
-          "https://bigboost.com.ng",
-          "https://servafri.com"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://victorbodude.name.ng#website",
-        "url": "https://victorbodude.name.ng",
-        "name": "Victor Bodude – Software Engineer & Web Developer",
-        "publisher": {
-          "@id": "https://victorbodude.name.ng#victor"
-        },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://victorbodude.name.ng/?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://victorbodude.name.ng#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Can I hire you as a web developer in Nigeria?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. I work with clients in Nigeria and worldwide as a freelance Software Engineer and Web Developer. I build business websites, portfolio sites, landing pages, SaaS dashboards and custom web apps."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What type of websites do you build?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "I build corporate websites, personal portfolios, ecommerce stores, landing pages, school websites, fintech dashboards, SaaS dashboards and custom platforms connected to APIs and cloud services."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you build SEO friendly and mobile responsive websites?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. All websites I build are fully responsive on mobile, tablet and desktop. I also implement clean HTML structure, meta tags, performance optimization and SEO best practices to help your site rank better."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Which cities in Nigeria do you work with?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "I work with clients in Lagos, Abuja, Port Harcourt, Ibadan, Benin, Enugu, Uyo, Owerri and other cities across Nigeria. I also work with international clients remotely."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Which technologies do you use as a software engineer?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "I work with HTML, CSS, JavaScript, React, Next.js, Tailwind CSS, PHP, Laravel, Java, Go, Python, MySQL and cloud platforms. I focus on building fast, secure and scalable solutions."
-            }
-          }
-        ]
-      }
+    "@type": "Person",
+    "@id": "https://victorbodude.name.ng/#victor-bodude",
+    "name": "Victor Bodude",
+    "url": "https://victorbodude.name.ng",
+    "image": "https://victorbodude.name.ng/og.png",
+    "jobTitle": "Software Engineer and Tech Entrepreneur",
+    "description": "Software Engineer and Tech Entrepreneur focused on building scalable software systems, cloud infrastructure, and high-performance digital platforms.",
+    "sameAs": [
+      "https://github.com/vobzzartt",
+      "https://www.linkedin.com/in/victorbodude",
+      "https://x.com/vobzzartt",
+      "https://www.instagram.com/vobzzartt"
     ]
   }
   </script>
-
-  <!-- Optional: simple JS redirect for GitHub Pages-style routes (keep/change if you use it) -->
-  <script>
-    // Example: if you later host on a subpath like /My-React-Portfolio, you can adjust routing here
-    // if (window.location.pathname.startsWith("/My-React-Portfolio") && !window.location.pathname.includes(".")) {
-    //   window.location.href = "/My-React-Portfolio/#/";
-    // }
-  </script>
 </head>
+
 <body>
   <div id="root"></div>
 
@@ -270,4 +105,3 @@
   <script type="module" src="./src/main.jsx"></script>
 
 </body>
-</html>
