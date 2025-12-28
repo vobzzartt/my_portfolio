@@ -35,7 +35,7 @@ export default function Contact() {
       if (result.success) {
         setModalOpen(true);
         setFormData({ name: "", email: "", message: "" });
-      } 
+      }
     } catch (error) {
       alert("Something went wrong. Try again.");
     }
@@ -44,28 +44,34 @@ export default function Contact() {
   };
 
   return (
-    <div className="max-w-full overflow-x-hidden flex flex-col justify-center items-center px-4" id="contact">
+    <div
+      id="contact"
+      className="max-w-full overflow-x-hidden flex flex-col items-center px-4 pt-24"
+    >
       {/* Heading */}
-      <div className="mb-0 flex items-center text-center justify-center">
-        <div className="flex items-center justify-center mr-4 mb-3">
+      <div className="mb-12 text-center">
+        <div className="flex justify-center mb-3">
           <span className="blinking-circle absolute w-1 h-1"></span>
           <span className="blinking-circle absolute w-2 h-2"></span>
           <span className="blinking-circle absolute w-3 h-3"></span>
         </div>
-        <h2 className="text-start md:text-center text-2xl font-bold mb-12 mt-8">
+        <h2 className="text-2xl font-bold">
           Looking to Build? I’d Love to Collaborate
         </h2>
       </div>
 
       {/* Contact Form */}
-      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-        <h2 className="text-2xl font-bold text-start mb-6">Reach Out To Me</h2>
+      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md mx-auto">
+        <h2 className="text-2xl font-bold text-center mb-6">
+          Reach Out To Me
+        </h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
-
           {/* Name */}
           <div>
-            <label className="block text-sm font-medium text-gray-500">Name</label>
+            <label className="block text-sm font-medium text-gray-500">
+              Name
+            </label>
             <input
               type="text"
               name="name"
@@ -80,7 +86,9 @@ export default function Contact() {
 
           {/* Email */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">Email</label>
+            <label className="block text-sm font-medium text-gray-700">
+              Email
+            </label>
             <input
               type="email"
               name="email"
@@ -95,7 +103,9 @@ export default function Contact() {
 
           {/* Message */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">Message</label>
+            <label className="block text-sm font-medium text-gray-700">
+              Message
+            </label>
             <textarea
               name="message"
               value={formData.message}
@@ -107,17 +117,18 @@ export default function Contact() {
             ></textarea>
           </div>
 
-          {/* Submit Button */}
-          <div className="text-start">
+          {/* Submit Button (CENTERED) */}
+          <div className="flex justify-center pt-2">
             <button
               type="submit"
-              className="bg-[#613B26] text-white font-normal text-md px-4 py-2 rounded-lg 
-              hover:bg-transparent hover:text-[#613B26] hover:border hover:border-[#BB8E5A] transition flex items-center"
               disabled={loading}
+              className="bg-[#613B26] text-white font-normal text-md px-6 py-2 rounded-lg 
+              hover:bg-transparent hover:text-[#613B26] hover:border hover:border-[#BB8E5A] 
+              transition flex items-center"
             >
-              {loading ? (
+              {loading && (
                 <span className="loader border-2 border-t-transparent border-white rounded-full w-4 h-4 mr-2"></span>
-              ) : null}
+              )}
               {loading ? "Sending..." : "Send Message"}
             </button>
           </div>
@@ -128,14 +139,15 @@ export default function Contact() {
       {modalOpen && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center px-4 z-50">
           <div className="bg-white p-8 rounded-xl shadow-xl w-full max-w-sm animate-fadeIn">
-            {/* Success Icon */}
             <div className="flex justify-center mb-4">
               <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center animate-pop">
                 <span className="text-white text-4xl">✓</span>
               </div>
             </div>
 
-            <h2 className="text-xl font-semibold text-center mb-2">Message Sent!</h2>
+            <h2 className="text-xl font-semibold text-center mb-2">
+              Message Sent!
+            </h2>
             <p className="text-center text-gray-600 mb-6">
               Your message was delivered successfully. I’ll get back to you shortly.
             </p>
