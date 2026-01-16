@@ -73,7 +73,7 @@ export default function Home() {
   return (
     <div
       id="home"
-      className="w-full px-4 md:px-16 lg:px-28 pt-10 bg-[#F9F6F0] max-w-full overflow-x-hidden"
+      className="w-full px-4 md:px-16 lg:px-28 pt-4 bg-[#F9F6F0] max-w-full overflow-x-hidden"
     >
       <div className="container mx-auto flex flex-col-reverse md:flex-row gap-8 min-h-screen items-center justify-center">
 
@@ -119,7 +119,8 @@ export default function Home() {
               </a>
             </motion.div>
 
-            <div className="flex items-center gap-2 bg-green-100 text-green-700 px-3 py-[6px] rounded-full text-xs font-medium shadow">
+            {/* FIXED AVAILABLE BUTTON */}
+            <div className="flex items-center gap-2 bg-green-100 text-green-700 px-8 py-3 rounded-xl text-sm font-medium shadow h-[48px]">
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
               Available
             </div>
