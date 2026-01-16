@@ -38,7 +38,7 @@ export default function About() {
           {skills.map((skill, index) => (
             <div 
               key={index} 
-              className='bg-white p-4 shadow-md flex flex-col items-center justify-center rounded-md'
+              className='bg-white p-4 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center justify-center rounded-md'
             >
               <img src={skill.src} className="w-10 mb-2 object-contain" alt={`${skill.label} logo`} />
               <span className="text-xs font-semibold text-center">{skill.label}</span>
@@ -47,15 +47,17 @@ export default function About() {
         </div>
 
         {/* Mobile Marquee */}
-        <div className="relative overflow-hidden w-full md:hidden mt-4 h-[120px]">
+        <div className="relative overflow-hidden w-full md:hidden mt-4 h-[160px]">
           <div className="flex animate-marquee whitespace-nowrap py-2">
             {skills.concat(skills).map((skill, index) => (
               <div 
                 key={index} 
-                className="flex flex-col items-center bg-white p-4 shadow-md min-w-[140px] mx-3 rounded-md"
+                className="flex flex-col items-center bg-white p-4 shadow-sm hover:shadow-md transition-all duration-300 min-w-[150px] mx-3 rounded-md"
               >
                 <img src={skill.src} className="w-10 mb-1 object-contain" alt={`${skill.label} logo`} />
-                <span className="text-xs font-semibold text-center whitespace-normal">{skill.label}</span>
+                <span className="text-xs font-semibold text-center whitespace-normal leading-tight">
+                  {skill.label}
+                </span>
               </div>
             ))}
           </div>
@@ -97,16 +99,16 @@ export default function About() {
 
       </div>
 
-      {/* Fixed Marquee Animation */}
+      {/* FIXED Marquee Animation */}
       <style>
         {`
           @keyframes marquee {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            100% { transform: translateX(-100%); }
           }
           .animate-marquee {
             display: flex;
-            animation: marquee 18s linear infinite;
+            animation: marquee 25s linear infinite;
           }
         `}
       </style>
