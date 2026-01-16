@@ -13,7 +13,7 @@ const rotatingTexts = [
   "I'm a Cloud Engineer",
   "I'm a Software Tester",
   "I'm a Blockchain Innovator",
-  "I'm a Tech Entrepreneur"
+  "I'm a Tech Entrepreneur",
   "I'm friendly, let's connect💙"
 ];
 
@@ -85,6 +85,7 @@ export default function Home() {
           exit="hidden"
           className="w-full md:w-1/2"
         >
+
           {/* STATUS */}
           <div className="mb-4 flex items-center gap-x-3">
             <div className="relative flex items-center mr-3">
@@ -96,34 +97,34 @@ export default function Home() {
             </h5>
           </div>
 
-          {/* ROTATING TITLES */}
+          {/* TITLES */}
           <RotatingTitles />
 
           {/* INTRO TEXT */}
-         <p className="font-normal text-[14px] max-w-2xl mb-6 leading-relaxed tracking-wide text-black">
-  Building modern digital systems that support Africa’s growing technology landscape.
-</p>
+          <p className="font-normal text-[14px] max-w-2xl mb-6 leading-relaxed tracking-wide text-black">
+            Building modern digital systems that support Africa’s growing technology landscape.
+          </p>
 
-          {/* MY CV BUTTON */}
+          {/* RESUME + AVAILABLE */}
           <div className="flex items-center gap-4">
-  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-    <a
-      href="/Victor_Bodudee_CV.pdf"
-      download="Victor_Bodudee_CV.pdf"
-      className="px-8 py-3 bg-[#613B26] text-white rounded-xl font-medium shadow-xl 
-      hover:bg-transparent hover:border-2 hover:border-[#613B26] hover:text-[#613B26]
-      transition-colors duration-300 inline-block text-center"
-    >
-      My Resume
-    </a>
-  </motion.div>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <a
+                href="/Victor_Bodudee_CV.pdf"
+                download="Victor_Bodudee_CV.pdf"
+                className="px-8 py-3 bg-[#613B26] text-white rounded-xl font-medium shadow-xl 
+                hover:bg-transparent hover:border-2 hover:border-[#613B26] hover:text-[#613B26]
+                transition-colors duration-300 inline-block text-center"
+              >
+                My Resume
+              </a>
+            </motion.div>
 
-  {/* AVAILABLE BADGE */}
-  <div className="flex items-center gap-2 bg-green-100 text-green-700 px-3 py-[6px] rounded-full text-xs font-medium shadow">
-    <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-    Available
-  </div>
-</div>
+            <div className="flex items-center gap-2 bg-green-100 text-green-700 px-3 py-[6px] rounded-full text-xs font-medium shadow">
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+              Available
+            </div>
+          </div>
+        </motion.div>
 
         {/* RIGHT IMAGE */}
         <motion.div
@@ -140,22 +141,5 @@ export default function Home() {
             className="flex justify-center"
           >
             <img
-  src={mypicture}
-  alt="Victor Bodude"
-  className="
-    object-cover
-    rounded-full
-    shadow-2xl
-
-    w-[340px] h-[340px]
-    md:w-[460px] md:h-[460px]
-    lg:w-[650px] lg:h-[650px]
-  "
-/>
-          </motion.div>
-        </motion.div>
-
-      </div>
-    </div>
-  );
-}
+              src={mypicture}
+              alt="Victor Bod
