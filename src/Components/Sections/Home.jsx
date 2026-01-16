@@ -14,6 +14,7 @@ const rotatingTexts = [
   "I'm a Software Tester",
   "I'm a Blockchain Innovator",
   "I'm a Tech Entrepreneur"
+  "I'm friendly, let's connect💙"
 ];
 
 function RotatingTitles() {
