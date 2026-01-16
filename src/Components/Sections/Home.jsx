@@ -142,4 +142,20 @@ export default function Home() {
           >
             <img
               src={mypicture}
-              alt="Victor Bod
+              alt="Victor Bodude"
+              className="
+                object-cover
+                rounded-full
+                shadow-2xl
+                w-[340px] h-[340px]
+                md:w-[460px] md:h-[460px]
+                lg:w-[650px] lg:h-[650px]
+              "
+            />
+          </motion.div>
+        </motion.div>
+
+      </div>
+    </div>
+  );
+}
