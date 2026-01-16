@@ -9,7 +9,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 AOS.init();
 
-// ORDER: HTML → CSS → JavaScript → React → PHP → Python → Go → Java → MySQL → Software Testing → Cloud Computing → Blockchain Innovation
 const skills = [
   { src: html, label: "HTML" },
   { src: css, label: "CSS" },
@@ -18,17 +17,17 @@ const skills = [
 
   { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg", label: "PHP" },
   { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", label: "Python" },
-  { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg", label: "Go (Golang)" },
+  { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg", label: "Go" },
   { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", label: "Java" },
   { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", label: "MySQL" },
   { src: "https://cdn-icons-png.flaticon.com/512/1157/1157109.png", label: "Software Testing" },
-  { src: "https://cdn-icons-png.flaticon.com/512/414/414927.png", label: "Cloud Computing" }, // fixed cloud icon
+  { src: "https://cdn-icons-png.flaticon.com/512/414/414927.png", label: "Cloud Computing" },
   { src: "https://cdn-icons-png.flaticon.com/512/7016/7016530.png", label: "Blockchain Innovation" }
 ];
 
 export default function About() {
   return (
-    <div className='max-w-full overflow-x-hidden container mx-auto px-3 md:px-16 lg:pt-24 lg:px-24 pt-10 md:pt-16' id='about'>
+    <div className='max-w-full overflow-x-hidden container mx-auto px-4 md:px-16 lg:pt-24 lg:px-24 pt-12 md:pt-16' id='about'>
       <div className="grid grid-cols-1 md:grid-cols-2 relative gap-x-10 gap-y-6">
 
         {/* Desktop Skills Grid */}
@@ -41,32 +40,22 @@ export default function About() {
               key={index} 
               className='bg-white p-4 shadow-xl flex flex-col items-center justify-center rounded-md'
             >
-              <img src={skill.src} className="w-10 mb-2" alt={`${skill.label} logo`} />
+              <img src={skill.src} className="w-10 mb-2 object-contain" alt={`${skill.label} logo`} />
               <span className="text-xs font-semibold text-center">{skill.label}</span>
             </div>
           ))}
         </div>
 
-        {/* Marquee for Mobile */}
+        {/* Mobile Marquee */}
         <div className="relative overflow-hidden w-full md:hidden mt-4">
-          <div className="flex animate-marquee whitespace-nowrap">
-            {skills.map((skill, index) => (
+          <div className="flex animate-marquee whitespace-nowrap py-2">
+            {skills.concat(skills).map((skill, index) => (
               <div 
                 key={index} 
-                className="flex flex-col items-center bg-white p-3 shadow-xl min-w-[90px] mx-2 rounded-md"
+                className="flex flex-col items-center bg-white p-4 shadow-xl min-w-[110px] mx-3 rounded-md"
               >
-                <img src={skill.src} className="w-10 mb-1" alt={`${skill.label} logo`} />
-                <span className="text-xs font-semibold text-center">{skill.label}</span>
-              </div>
-            ))}
-            {/* duplicate once for seamless infinite scroll */}
-            {skills.map((skill, index) => (
-              <div 
-                key={"dup-" + index} 
-                className="flex flex-col items-center bg-white p-3 shadow-xl min-w-[90px] mx-2 rounded-md"
-              >
-                <img src={skill.src} className="w-10 mb-1" alt={`${skill.label} logo`} />
-                <span className="text-xs font-semibold text-center">{skill.label}</span>
+                <img src={skill.src} className="w-10 mb-1 object-contain" alt={`${skill.label} logo`} />
+                <span className="text-xs font-semibold text-center whitespace-normal">{skill.label}</span>
               </div>
             ))}
           </div>
@@ -74,54 +63,50 @@ export default function About() {
 
         {/* ABOUT TEXT */}
         <div
-          className='w-full mt-6 md:mt-0 md:text-left md:ml-auto'
+          className='w-full mt-6 md:mt-0 text-center md:text-center lg:text-center'
           data-aos="zoom-in-left"
         >
-          <div className="mb-4 flex items-center gap-x-5">
+          <div className="mb-4 flex items-center justify-center gap-x-5">
             <div className="relative flex items-center mr-3">
               <span className="blinking-circle absolute w-2 h-2"></span>
               <span className="blinking-circle absolute w-4 h-4"></span>
             </div>
-            <h4 className='text-2xl font-bold md:text-start lg:text-start text-center'>
-              What You Need To Know
+            <h4 className='text-2xl font-bold text-center'>
+              About
             </h4>
           </div>
 
-          <p className="text-gray-900 text-base md:text-lg font-[450] text-start px-3 w-auto md:px-0 leading-relaxed tracking-wide">
-            I’m Victor Bodude — a Software Engineer, Tech Entrepreneur and emerging Technology Innovist focused on building modern, reliable, and scalable digital experiences. My work blends software engineering, cloud technologies, and intelligent systems to create solutions that feel fast, elegant, and impactful.
+          <p className="text-gray-900 text-base md:text-lg font-[450] text-center leading-relaxed tracking-wide px-4 md:px-0">
+            I develop scalable and efficient systems designed to deliver smooth experiences and solve practical problems across various industries.
 
             <br /><br />
-            I’ve spent the past three years engineering products that combine clean architecture, thoughtful design, and long-term scalability. Even at 18, my journey has been shaped by deep curiosity, continuous learning, and a commitment to building technology that actually solves problems.
+            I’m Victor Bodude, an 18-year-old Nigerian software engineer focused on backend development, automation and modern web technologies. I enjoy building products that are fast, stable and straightforward for people to use.
 
             <br /><br />
-            I enjoy turning ideas into real, scalable systems — from concept to architecture to execution. My work revolves around building technology that is fast, reliable, and built to last. I focus on writing clean, efficient code and engineering solutions that deliver long-term value, not quick fixes.
+            I’m also the founder of Servafri, a cloud platform that makes it easy for developers and businesses to deploy and manage their digital services, with support for localized payments and simple, reliable setup.
 
             <br /><br />
-            Beyond coding, I’m driven by growth — personal, technical, and entrepreneurial. As a young founder, I thrive on identifying problems worth solving and building products that create real impact. I love engineering systems that scale, automating processes, and creating technology that enables people, businesses, and communities to do more.
+            Beyond engineering, I take interest in sharing knowledge, guiding younger developers and contributing to the growth of the African tech space.
 
             <br /><br />
-            I believe innovation isn’t just about creativity — it’s about execution, discipline, and the ability to build what others only talk about. That mindset guides every project I work on, whether I’m designing architectures, building automation, or exploring new technologies that shape the future.
-
-            <br /><br />
-            At the core of everything I build is intention, clarity, and a commitment to engineering meaningful digital impact.
-
-            <br /><br />
-            Let’s build something great.
+            I like building practical, clean and dependable solutions.
+            <br />
+            Connect. Let’s create something meaningful.
           </p>
         </div>
 
       </div>
 
-      {/* Marquee Animation */}
+      {/* Fixed Marquee Animation */}
       <style>
         {`
           @keyframes marquee {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
+            100% { transform: translateX(-50%); }
           }
           .animate-marquee {
             display: flex;
-            animation: marquee 40s linear infinite;
+            animation: marquee 18s linear infinite;
           }
         `}
       </style>
