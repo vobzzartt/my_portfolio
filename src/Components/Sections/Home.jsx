@@ -33,7 +33,7 @@ function RotatingTitles() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.6 }}
-      className="text-black font-medium text-3xl lg:text-5xl mb-2 leading-tight tracking-normal text-center md:text-left"
+      className="text-black font-medium text-3xl lg:text-5xl mb-2 leading-tight tracking-normal"
     >
       {rotatingTexts[index]}
     </motion.h2>
@@ -82,10 +82,10 @@ export default function Home() {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="w-full md:w-1/2 text-center md:text-left"
+          className="w-full md:w-1/2"
         >
           {/* STATUS */}
-          <div className="mb-4 flex items-center gap-x-3 justify-center md:justify-start">
+          <div className="mb-4 flex items-center gap-x-3">
             <div className="relative flex items-center mr-3">
               <span className="absolute w-2 h-2 bg-[#613B26] rounded-full blinking-circle"></span>
               <span className="absolute w-4 h-4 border border-[#613B26] rounded-full blinking-circle"></span>
@@ -99,33 +99,27 @@ export default function Home() {
           <RotatingTitles />
 
           {/* INTRO TEXT */}
-          <p className="font-normal text-[14px] max-w-2xl mb-6 leading-relaxed tracking-wide text-black text-center md:text-left">
-            Building modern digital systems that support Africa’s growing technology landscape.
+          <p className="font-normal text-[14px] max-w-2xl mb-6 leading-relaxed tracking-wide text-black">
+            I build clean, scalable applications and cloud platforms using modern technologies.  
+            I specialize in Full-Stack Engineering, Cloud Infrastructure, AI Systems, Cybersecurity,  
+            Blockchain Innovation, and high-performance backend architecture.
+            <br /><br />
+            My mission is to create meaningful digital solutions that impact businesses, creators,  
+            and Africa’s growing tech ecosystem.
           </p>
 
-          {/* BUTTON ROW */}
-          <div className="flex items-center gap-4 justify-center md:justify-start mt-4">
-
-            {/* RESUME BUTTON */}
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <a
-                href="/Victor_Bodude_CV.pdf"
-                download="Victor_Bodude_CV.pdf"
-                className="px-8 py-3 bg-[#613B26] text-white rounded-xl font-medium shadow-xl 
-                hover:bg-transparent hover:border-2 hover:border-[#613B26] hover:text-[#613B26]
-                transition-colors duration-300 inline-block text-center"
-              >
-                My Resume
-              </a>
-            </motion.div>
-
-            {/* GREEN AVAILABLE BADGE */}
-            <span className="px-4 py-2 bg-green-100 text-green-700 font-medium text-xs rounded-full flex items-center gap-2 shadow-sm">
-              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-              Available
-            </span>
-
-          </div>
+          {/* MY CV BUTTON */}
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <a
+              href="/Victor_Bodude_CV.pdf"
+              download="Victor_Bodude_CV.pdf"
+              className="px-8 py-3 bg-[#613B26] text-white rounded-xl font-medium shadow-xl 
+              hover:bg-transparent hover:border-2 hover:border-[#613B26] hover:text-[#613B26]
+              transition-colors duration-300 inline-block text-center"
+            >
+              My Resume
+            </a>
+          </motion.div>
         </motion.div>
 
         {/* RIGHT IMAGE */}
@@ -143,18 +137,18 @@ export default function Home() {
             className="flex justify-center"
           >
             <img
-              src={mypicture}
-              alt="Victor Bodude"
-              className="
-                object-cover
-                rounded-full
-                shadow-2xl
+  src={mypicture}
+  alt="Victor Bodude"
+  className="
+    object-cover
+    rounded-full
+    shadow-2xl
 
-                w-[340px] h-[340px]
-                md:w-[460px] md:h-[460px]
-                lg:w-[650px] lg:h-[650px]
-              "
-            />
+    w-[340px] h-[340px]
+    md:w-[460px] md:h-[460px]
+    lg:w-[650px] lg:h-[650px]
+  "
+/>
           </motion.div>
         </motion.div>
 
