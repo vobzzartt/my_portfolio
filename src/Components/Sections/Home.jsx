@@ -99,28 +99,30 @@ export default function Home() {
           <RotatingTitles />
 
           {/* INTRO TEXT */}
-          <p className="font-normal text-[14px] max-w-2xl mb-6 leading-relaxed tracking-wide text-black">
-            I build clean, scalable applications and cloud platforms using modern technologies.  
-            I specialize in Full-Stack Engineering, Cloud Infrastructure, AI Systems, Cybersecurity,  
-            Blockchain Innovation, and high-performance backend architecture.
-            <br /><br />
-            My mission is to create meaningful digital solutions that impact businesses, creators,  
-            and Africa’s growing tech ecosystem.
-          </p>
+         <p className="font-normal text-[14px] max-w-2xl mb-6 leading-relaxed tracking-wide text-black">
+  Building modern digital systems that support Africa’s growing technology landscape.
+</p>
 
           {/* MY CV BUTTON */}
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <a
-              href="/Victor_Bodude_CV.pdf"
-              download="Victor_Bodude_CV.pdf"
-              className="px-8 py-3 bg-[#613B26] text-white rounded-xl font-medium shadow-xl 
-              hover:bg-transparent hover:border-2 hover:border-[#613B26] hover:text-[#613B26]
-              transition-colors duration-300 inline-block text-center"
-            >
-              My Resume
-            </a>
-          </motion.div>
-        </motion.div>
+          <div className="flex items-center gap-4">
+  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+    <a
+      href="/Victor_Bodudee_CV.pdf"
+      download="Victor_Bodudee_CV.pdf"
+      className="px-8 py-3 bg-[#613B26] text-white rounded-xl font-medium shadow-xl 
+      hover:bg-transparent hover:border-2 hover:border-[#613B26] hover:text-[#613B26]
+      transition-colors duration-300 inline-block text-center"
+    >
+      My Resume
+    </a>
+  </motion.div>
+
+  {/* AVAILABLE BADGE */}
+  <div className="flex items-center gap-2 bg-green-100 text-green-700 px-3 py-[6px] rounded-full text-xs font-medium shadow">
+    <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+    Available
+  </div>
+</div>
 
         {/* RIGHT IMAGE */}
         <motion.div
