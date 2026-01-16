@@ -26,19 +26,19 @@ export default function Projects() {
       desktopImg: project1Desktop,
       mobileImg: project1Mobile,
       description:
-        "ServAfri is Africa’s next-generation cloud infrastructure platform designed for developers, startups, and enterprises. It provides scalable compute, storage, and API systems with localized payments and transparent billing.",
-      technology: "Go (Golang) • Docker • Cloud Architecture • API Systems",
+        "ServAfri is Africa’s next-generation cloud infrastructure platform designed for developers, startups, and enterprises. It provides scalable compute, storage, networking, and API systems with localized payments and transparent billing.",
+      technology: "Go (Golang) • Cloud Architecture • API Systems",
       link: "https://servafri.com",
       code: "",
       dataAos: "zoom-in-up",
     },
     {
       id: 102,
-      name: "BigBoost Media Hub – SMM Automation Platform",
+      name: "BigBoost Media Hub – Social Media Marketing Platform",
       desktopImg: project2Desktop,
       mobileImg: project2Mobile,
       description:
-        "BigBoost is a high-scale SMM automation platform delivering millions of social engagement services across Instagram, TikTok, YouTube, X, Facebook, and more.",
+        "BigBoost is a high-scale SMM automation platform delivering thousands of social engagement services across Instagram, TikTok, YouTube, X, Facebook, and more.",
       technology: "HTML • CSS • JavaScript • PHP • MySQL",
       link: "https://bigboost.com.ng",
       code: "",
@@ -139,7 +139,7 @@ export default function Projects() {
               Founder — Big7 Technologies
             </h3>
             <p className="text-sm text-gray-600 mt-1">
-              UK • 2024 — Present
+              Nigeria • 2024 — Present
             </p>
             <p className="text-sm text-black mt-4 max-w-3xl">
               Founded Big7 Technologies as a parent technology company focused on
