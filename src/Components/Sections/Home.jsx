@@ -110,7 +110,7 @@ export default function Home() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <a
                 href="/Victor_Bodudee_CV.pdf"
-                download="Victor_Bodude_CV.pdf"
+                download="Victor_Bodudee_CV.pdf"
                 className="px-8 py-3 bg-[#613B26] text-white rounded-xl font-medium shadow-xl 
                 hover:bg-transparent hover:border-2 hover:border-[#613B26] hover:text-[#613B26]
                 transition-colors duration-300 inline-flex items-center justify-center text-center h-[52px]"
