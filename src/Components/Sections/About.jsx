@@ -38,7 +38,7 @@ export default function About() {
           {skills.map((skill, index) => (
             <div 
               key={index} 
-              className='bg-white p-4 shadow-xl flex flex-col items-center justify-center rounded-md'
+              className='bg-white p-4 shadow-md flex flex-col items-center justify-center rounded-md'
             >
               <img src={skill.src} className="w-10 mb-2 object-contain" alt={`${skill.label} logo`} />
               <span className="text-xs font-semibold text-center">{skill.label}</span>
@@ -47,12 +47,12 @@ export default function About() {
         </div>
 
         {/* Mobile Marquee */}
-        <div className="relative overflow-hidden w-full md:hidden mt-4">
+        <div className="relative overflow-hidden w-full md:hidden mt-4 h-[120px]">
           <div className="flex animate-marquee whitespace-nowrap py-2">
             {skills.concat(skills).map((skill, index) => (
               <div 
                 key={index} 
-                className="flex flex-col items-center bg-white p-4 shadow-xl min-w-[110px] mx-3 rounded-md"
+                className="flex flex-col items-center bg-white p-4 shadow-md min-w-[140px] mx-3 rounded-md"
               >
                 <img src={skill.src} className="w-10 mb-1 object-contain" alt={`${skill.label} logo`} />
                 <span className="text-xs font-semibold text-center whitespace-normal">{skill.label}</span>
@@ -63,7 +63,7 @@ export default function About() {
 
         {/* ABOUT TEXT */}
         <div
-          className='w-full mt-6 md:mt-0 text-center md:text-center lg:text-center'
+          className='w-full mt-6 md:mt-0 text-center'
           data-aos="zoom-in-left"
         >
           <div className="mb-4 flex items-center justify-center gap-x-5">
