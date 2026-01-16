@@ -80,7 +80,7 @@ export default function About() {
             I develop scalable and efficient systems designed to deliver smooth experiences and solve practical problems across various industries.
 
             <br /><br />
-            I’m Victor Bodude, an 18-year-old Nigerian software engineer focused on backend development, automation and modern web technologies. I enjoy building products that are fast, stable and straightforward for people to use.
+            I’m Victor Bodude, a 18-year-old Nigerian software engineer focused on backend development, cloud computing, ai, and modern web technologies. I specialize in developing high-performance applications, cloud-ready services and engineering solutions that work smoothly at scale.
 
             <br /><br />
             I’m also the founder of Servafri, a cloud platform that makes it easy for developers and businesses to deploy and manage their digital services, with support for localized payments and simple, reliable setup.
