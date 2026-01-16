@@ -34,7 +34,7 @@ function RotatingTitles() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.6 }}
-      className="text-black font-medium text-3xl lg:text-5xl mb-2 leading-tight tracking-normal"
+      className="text-black font-medium text-3xl lg:text-5xl mb-2 leading-tight tracking-normal text-center md:text-left"
     >
       {rotatingTexts[index]}
     </motion.h2>
@@ -73,9 +73,9 @@ export default function Home() {
   return (
     <div
       id="home"
-      className="w-full px-4 md:px-16 lg:px-28 pt-4 bg-[#F9F6F0] max-w-full overflow-x-hidden"
+      className="w-full px-4 md:px-16 lg:px-28 pt-0 bg-[#F9F6F0] max-w-full overflow-x-hidden"
     >
-      <div className="container mx-auto flex flex-col-reverse md:flex-row gap-8 min-h-screen items-center justify-center">
+      <div className="container mx-auto flex flex-col-reverse md:flex-row gap-8 min-h-screen items-center justify-center mt-[-40px]">
 
         {/* LEFT CONTENT */}
         <motion.div
@@ -83,7 +83,7 @@ export default function Home() {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="w-full md:w-1/2"
+          className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left"
         >
 
           {/* STATUS */}
@@ -101,26 +101,26 @@ export default function Home() {
           <RotatingTitles />
 
           {/* INTRO TEXT */}
-          <p className="font-normal text-[14px] max-w-2xl mb-6 leading-relaxed tracking-wide text-black">
+          <p className="font-normal text-[14px] max-w-2xl mb-6 leading-relaxed tracking-wide text-black text-center md:text-left">
             Building modern digital systems that support Africa’s growing technology landscape.
           </p>
 
-          {/* RESUME + AVAILABLE */}
-          <div className="flex items-center gap-4">
+          {/* RESUME + AVAILABLE (Centered & Same Size) */}
+          <div className="flex items-center justify-center md:justify-start gap-5 mt-4">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <a
                 href="/Victor_Bodude_CV.pdf"
                 download="Victor_Bodude_CV.pdf"
                 className="px-8 py-3 bg-[#613B26] text-white rounded-xl font-medium shadow-xl 
                 hover:bg-transparent hover:border-2 hover:border-[#613B26] hover:text-[#613B26]
-                transition-colors duration-300 inline-block text-center"
+                transition-colors duration-300 inline-flex items-center justify-center text-center h-[52px]"
               >
                 My Resume
               </a>
             </motion.div>
 
-            {/* FIXED AVAILABLE BUTTON */}
-            <div className="flex items-center gap-2 bg-green-100 text-green-700 px-8 py-3 rounded-xl text-sm font-medium shadow h-[48px]">
+            {/* FIXED AVAILABLE BUTTON — EXACT MATCH */}
+            <div className="flex items-center gap-2 bg-green-100 text-green-700 px-8 py-3 rounded-xl text-sm font-medium shadow h-[52px]">
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
               Available
             </div>
