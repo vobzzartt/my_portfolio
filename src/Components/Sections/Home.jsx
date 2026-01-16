@@ -109,7 +109,7 @@ export default function Home() {
           <div className="flex items-center justify-center md:justify-start gap-5 mt-4">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <a
-                href="/Victor_Bodude_CV.pdf"
+                href="/Victor_Bodudee_CV.pdf"
                 download="Victor_Bodude_CV.pdf"
                 className="px-8 py-3 bg-[#613B26] text-white rounded-xl font-medium shadow-xl 
                 hover:bg-transparent hover:border-2 hover:border-[#613B26] hover:text-[#613B26]
