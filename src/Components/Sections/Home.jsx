@@ -13,8 +13,7 @@ const rotatingTexts = [
   "I'm a Cloud Engineer",
   "I'm a Software Tester",
   "I'm a Blockchain Innovator",
-  "I'm a Tech Entrepreneur",
-  "I'm Friendly, let's connect💙"
+  "I'm a Tech Entrepreneur"
 ];
 
 function RotatingTitles() {
@@ -96,13 +95,6 @@ export default function Home() {
             </h5>
           </div>
 
-          {/* NEW GREEN "AVAILABLE" BADGE */}
-          <div className="mb-3 flex justify-center md:justify-start">
-            <span className="px-3 py-1 bg-green-500 text-white text-xs font-semibold rounded-full animate-pulse shadow-md">
-              Active
-            </span>
-          </div>
-
           {/* ROTATING TITLES */}
           <RotatingTitles />
 
@@ -111,22 +103,29 @@ export default function Home() {
             Building modern digital systems that support Africa’s growing technology landscape.
           </p>
 
-          {/* MY RESUME BUTTON */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex justify-center md:justify-start"
-          >
-            <a
-              href="/Victor_Bodude_CV.pdf"
-              download="Victor_Bodude_CV.pdf"
-              className="px-8 py-3 bg-[#613B26] text-white rounded-xl font-medium shadow-xl
-              hover:bg-transparent hover:border-2 hover:border-[#613B26] hover:text-[#613B26]
-              transition-colors duration-300 inline-block text-center"
-            >
-              My Resume
-            </a>
-          </motion.div>
+          {/* BUTTON ROW */}
+          <div className="flex items-center gap-4 justify-center md:justify-start mt-4">
+
+            {/* RESUME BUTTON */}
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <a
+                href="/Victor_Bodude_CV.pdf"
+                download="Victor_Bodude_CV.pdf"
+                className="px-8 py-3 bg-[#613B26] text-white rounded-xl font-medium shadow-xl 
+                hover:bg-transparent hover:border-2 hover:border-[#613B26] hover:text-[#613B26]
+                transition-colors duration-300 inline-block text-center"
+              >
+                My Resume
+              </a>
+            </motion.div>
+
+            {/* GREEN AVAILABLE BADGE */}
+            <span className="px-4 py-2 bg-green-100 text-green-700 font-medium text-xs rounded-full flex items-center gap-2 shadow-sm">
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+              Available
+            </span>
+
+          </div>
         </motion.div>
 
         {/* RIGHT IMAGE */}
