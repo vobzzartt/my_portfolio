@@ -57,7 +57,7 @@ export default function Projects() {
       >
         <div className="mb-20 text-center">
           <h4 className="lg:text-3xl md:text-2xl text-2xl font-bold">
-            Selected Projects
+            Here's What I've Been Up To.
           </h4>
           <div className="mx-auto mt-4 h-[2px] w-20 bg-[#613B26]" />
         </div>
