@@ -155,7 +155,7 @@ export default function Projects() {
           <div>
             <span className="absolute -left-[7px] mt-2 w-3 h-3 rounded-full bg-[#613B26]" />
             <h3 className="text-xl font-semibold">
-              Co-Founder & CTO — ServAfri
+              CTO — ServAfri
             </h3>
             <p className="text-sm text-gray-600 mt-1">
               Africa • 2025 — Present
@@ -165,7 +165,7 @@ export default function Projects() {
               architecture, platform reliability, and scalable deployment systems.
             </p>
             <p className="text-sm font-medium mt-3">
-              Engineering Leadership • Cloud Architecture • DevOps
+              Engineering Leadership • Cloud Architecture • Backend Developer
             </p>
           </div>
 
@@ -191,17 +191,17 @@ export default function Projects() {
           <div>
             <span className="absolute -left-[7px] mt-2 w-3 h-3 rounded-full bg-[#613B26]" />
             <h3 className="text-xl font-semibold">
-              Director of IT — Treasure House Logistics
+              Web Developer — Treasure House Logistics
             </h3>
             <p className="text-sm text-gray-600 mt-1">
               Ogun State, Nigeria • 2025 — Present
             </p>
             <p className="text-sm text-black mt-4 max-w-3xl">
-              Overseeing IT infrastructure, digital systems, and security strategy
+              website developer, digital systems, and security strategy
               across logistics and business operations.
             </p>
             <p className="text-sm font-medium mt-3">
-              Infrastructure • Security • IT Leadership
+              Website Developer • Security • IT Leadership
             </p>
           </div>
 
