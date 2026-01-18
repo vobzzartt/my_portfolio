@@ -105,8 +105,8 @@ export default function Home() {
             Building modern digital systems that support Africa’s growing technology landscape.
           </p>
 
-          {/* RESUME + AVAILABLE (Centered & Same Size) */}
-          <div className="flex items-center justify-center md:justify-start gap-5 mt-4">
+          {/* MY RESUME ONLY (Centered) */}
+          <div className="flex items-center justify-center md:justify-start mt-4">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <a
                 href="/Victor_Bodudee_CV.pdf"
@@ -118,13 +118,8 @@ export default function Home() {
                 My Resume
               </a>
             </motion.div>
-
-            {/* FIXED AVAILABLE BUTTON — EXACT MATCH */}
-            <div className="flex items-center gap-2 bg-green-100 text-green-700 px-8 py-3 rounded-xl text-sm font-medium shadow h-[52px]">
-              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-              Available
-            </div>
           </div>
+
         </motion.div>
 
         {/* RIGHT IMAGE */}
