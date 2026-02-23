@@ -8,6 +8,7 @@ import 'animate.css';
 ---------------------------- */
 const rotatingTexts = [
   "I'm Victor Bodude",
+  "I'm 18",
   "I'm a Software Engineer",
   "I'm a Web Developer",
   "I'm a Cloud Engineer",
