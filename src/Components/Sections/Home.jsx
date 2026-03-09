@@ -8,8 +8,8 @@ import 'animate.css';
 ---------------------------- */
 const rotatingTexts = [
   "I'm Victor Bodude",
+  "I'm a Software Technologist",
   "I'm 18",
-  "I'm a Software Engineer",
   "I'm a Web Developer",
   "I'm a Cloud Engineer",
   "I'm a Software Tester",
@@ -94,7 +94,7 @@ export default function Home() {
               <span className="absolute w-4 h-4 border border-[#613B26] rounded-full blinking-circle"></span>
             </div>
             <h5 className="text-xs font-light text-[#613B26]">
-              Software Engineer • Tech Entrepreneur
+              Software Technologist • Tech Entrepreneur
             </h5>
           </div>
 
