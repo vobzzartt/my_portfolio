@@ -79,13 +79,13 @@ export default function About() {
           </div>
 
           <p className="text-gray-900 text-base md:text-lg font-[450] text-center leading-relaxed tracking-wide px-4 md:px-0">
-            I develop scalable and efficient systems designed to deliver smooth experiences and solve practical problems across various industries.
+            I develop scalable and efficient systems designed to deliver smooth experiences and solve practical problems across various tech industries.
 
             <br /><br />
-            I’m Victor Bodude, a software engineer focused on backend development, cloud computing, ai, and modern web technologies. I specialize in developing high-performance applications, cloud-ready services and engineering solutions that work smoothly at scale.
+            I’m Victor Bodude, a software technologist focused on web development, cloud computing, ai, and modern web technologies. I specialize in developing high-performance applications, cloud-ready services and engineering solutions that work smoothly at scale.
 
             <br /><br />
-            I’m also the founder of Servafri, a cloud platform that makes it easy for developers and businesses to deploy and manage their digital services, with support for localized payments and simple, reliable setup.
+I’m also the founder of ServAfri, a cloud infrastructure platform that helps developers and startups easily deploy, manage, and scale their applications, with reliable infrastructure and seamless localized payments support.
 
             <br /><br />
             Beyond engineering, I take interest in sharing knowledge, guiding younger developers and contributing to the growth of the African tech space.
